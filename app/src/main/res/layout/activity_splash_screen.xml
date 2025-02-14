@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashscreen"
+    tools:context=".SplashScreen">
+
+
+    <ImageView
+        android:id="@+id/splashlogo"
+        android:layout_width="272dp"
+        android:layout_height="289dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/splashtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387"
+        app:srcCompat="@drawable/logo"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/splashtitle"
+        android:layout_width="295dp"
+        android:layout_height="46dp"
+        android:text="LegalEase"
+        android:textAlignment="center"
+        android:textColor="#FFC107"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/splashsub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/splashsub"
+        android:layout_width="214dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/slogan"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_screen"
+    android:clipToOutline="true"
+    android:background="#000000"
+    android:elevation="6dp">
+
+    <!--  Header Section  -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:fillColor="#000000">
+        <RelativeLayout
+            android:id="@+id/main_header"
+            android:layout_width="350dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            >
+            <RelativeLayout
+                android:id="@+id/profile_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:clipToOutline="true"
+                android:background="@drawable/profile"/>
+            <RelativeLayout
+                android:id="@+id/header_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="322dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentBottom="true"
+                android:clipToOutline="true"
+                android:background="@drawable/hlaws"
+                />
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:text="Home"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="1sp"
+                android:textStyle="bold"
+                android:gravity="bottom"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/search_box"
+            android:layout_width="349dp"
+            android:layout_height="43dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/textbox">
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="219dp"
+                android:layout_height="37dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:layout_marginRight="86dp"
+                android:gravity="top"
+                android:hint="Search legal resources..."
+                android:lineSpacingExtra="4sp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp" />
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/search_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:clipToOutline="true"
+                android:background="@drawable/search"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--  Main Section  -->
+
+    <ScrollView
+        android:id="@+id/home_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/header"
+        android:layout_above="@id/nav_container"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Emergency Contact Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/help_container"
+                    android:layout_width="333dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/homecontainer"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/help_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/emergency" />
+
+                    <TextView
+                        android:id="@+id/help_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/help_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Emergency Contact"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/help_dis"
+                        android:layout_width="272dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/help_txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text='"Quick access to essential emergency numbers for legal and safety assistance."'
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:gravity="center" />
+
+                    <RelativeLayout
+                        android:id="@+id/contactbtn"
+                        android:layout_width="102dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/onboardbtn">
+
+                        <TextView
+                            android:id="@+id/contactbtn_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Contact"
+                            android:textColor="#171A1F"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Laws of Sri Lanka Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/lawsl_container"
+                    android:layout_width="333dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/homecontainer"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/lawsl_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/lawscover" />
+
+                    <TextView
+                        android:id="@+id/lawsl_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lawsl_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Laws of Sri Lanka"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lawsl_dis"
+                        android:layout_width="272dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lawsl_txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text='"Explore important legal provisions and rights under Sri Lankan law."'
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:gravity="center" />
+
+                    <RelativeLayout
+                        android:id="@+id/lawslbtn"
+                        android:layout_width="102dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/onboardbtn">
+
+                        <TextView
+                            android:id="@+id/lawslbtn_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Learn"
+                            android:textColor="#171A1F"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- About Us Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/aboutus_container"
+                    android:layout_width="333dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/homecontainer"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/aboutus_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/aboutus" />
+
+                    <TextView
+                        android:id="@+id/aboutus_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aboutus_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="About Us"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/aboutus_dis"
+                        android:layout_width="272dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aboutus_txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text='"Learn about our mission to make legal knowledge accessible to everyone."'
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:gravity="center" />
+
+                    <RelativeLayout
+                        android:id="@+id/aboutusbtn"
+                        android:layout_width="102dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/onboardbtn">
+
+                        <TextView
+                            android:id="@+id/aboutusbtn_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="About Us"
+                            android:textColor="#171A1F"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--  Nav Section  -->
+
+    <RelativeLayout
+        android:id="@+id/nav_container"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0.5dp"
+        android:background="@drawable/navcontainer"
+        android:elevation="1dp">
+
+        <RelativeLayout
+            android:id="@+id/nav_tab"
+            android:layout_width="334dp"
+            android:layout_height="52dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <!--Home-->
+            <RelativeLayout
+                android:id="@+id/h_frame"
+                android:layout_width="83.5dp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:clipToOutline="true">
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/home_icon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5sp"
+                    android:clipToOutline="true"
+                    android:background="@drawable/yhome"
+                    />
+                <TextView
+                    android:id="@+id/home_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Home"
+                    android:textColor="#FFD700"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30sp"/>
+            </RelativeLayout>
+
+            <!--Learn Laws-->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/l_frame"
+                android:layout_width="83.5dp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="83.5dp"
+                android:layout_alignParentTop="true"
+                android:clipToOutline="true">
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/law_icon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5sp"
+                    android:clipToOutline="true"
+                    android:background="@drawable/laws"
+                    />
+                <TextView
+                    android:id="@+id/law_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Learn Laws"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30sp"/>
+            </RelativeLayout>
+
+            <!--Legal FAQs-->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/f_frame"
+                android:layout_width="83.5dp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="167dp"
+                android:layout_alignParentTop="true"
+                android:clipToOutline="true">
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/faq_icon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5sp"
+                    android:clipToOutline="true"
+                    android:background="@drawable/question"
+                    />
+                <TextView
+                    android:id="@+id/faq_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Legal FAQs"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30sp"/>
+            </RelativeLayout>
+
+            <!--Legal Aids-->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/a_frame"
+                android:layout_width="83.5dp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="250.5dp"
+                android:layout_alignParentTop="true"
+                android:clipToOutline="true">
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/aids_icon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5sp"
+                    android:clipToOutline="true"
+                    android:background="@drawable/legalaids"
+                    />
+                <TextView
+                    android:id="@+id/aids_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Legal Aids"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
