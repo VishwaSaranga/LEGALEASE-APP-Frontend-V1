@@ -7,9 +7,11 @@ LegalEase | Frontend version 1.0 | 14th Feb 2025
 ⭕ Purpose and Goals
 
 LegalEase aims to bridge the gap between legal knowledge and the general public by offering a platform where users can:
-Access legal information in a structured and simplified manner.
-Navigate Sri Lanka’s laws, legal FAQs, and legal aid services.
-Manage personal user profiles with security and ease. 
+<ul>
+<li>Access legal information in a structured and simplified manner.</li>
+<li>Navigate Sri Lanka’s laws, legal FAQs, and legal aid services.</li>
+<li>Manage personal user profiles with security and ease.</li>
+</ul>
 
 ⭕ Key Features
 
@@ -21,11 +23,13 @@ Manage personal user profiles with security and ease.
 
 ⭕ Technical Skills Highlight
 
-I used:<br>
-Kotlin for Android app development.
-Android Studio as the primary development environment.
-XML for designing the user interface.
-Intent-based Navigation for seamless user interactions.
+I used:
+<ul>
+<li>Kotlin for Android app development.</li>
+<li>Android Studio as the primary development environment.</li>
+<li>XML for designing the user interface.</li>
+<li>Intent-based Navigation for seamless user interactions.</li>
+</ul>
 
 
 ⭕ Learning Outcomes
@@ -35,6 +39,6 @@ Intent-based Navigation for seamless user interactions.
 ◾ Intent Handling in Android<br>
 ◾ Android Development Best Practices<br>
 
-ITBNM-2211-0124 | W.V.S. Dissanayaka  <br>
+ITBNM-2211-0124 | W.V.S. Dissanayaka <br>
 Designer and Developer | LegalEase <br>
 Horizon Campus | IT Faculty (NMC Intake 11)
