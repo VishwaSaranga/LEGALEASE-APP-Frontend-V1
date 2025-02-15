@@ -2,6 +2,7 @@ package com.example.legalease
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -22,13 +23,29 @@ class SignUp : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val createaccount = findViewById<RelativeLayout>(R.id.createaccountbtn)
-        createaccount.setOnClickListener {
-            Toast.makeText(this, "Your account was created Successful!", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, HomeScreen::class.java)
-            startActivity(intent)
-            finish()
+
+        val createButton = findViewById<RelativeLayout>(R.id.createaccountbtn)
+        val username = findViewById<EditText>(R.id.your_name)
+        val usermail = findViewById<EditText>(R.id.your_email)
+        val userpass = findViewById<EditText>(R.id.your_pass)
+
+        createButton.setOnClickListener {
+            val name = username.text.toString().trim()
+            val email = usermail.text.toString().trim()
+            val pass = userpass.text.toString().trim()
+
+            if (name.isEmpty() || email.isEmpty() || pass.isEmpty()) {
+                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Your account was created Successful!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, HomeScreen::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
+
 
 
     }

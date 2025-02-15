@@ -3,6 +3,7 @@ package com.example.legalease
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -24,11 +25,23 @@ class SignIn : AppCompatActivity() {
         }
 
         val signInButton = findViewById<RelativeLayout>(R.id.sign_in_button)
+        val usermail = findViewById<EditText>(R.id.your_email)
+        val userpass = findViewById<EditText>(R.id.your_pass)
+
         signInButton.setOnClickListener {
-            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, HomeScreen::class.java)
-            startActivity(intent)
-            finish()
+            val email = usermail.text.toString().trim()
+            val pass = userpass.text.toString().trim()
+
+            if (email.isEmpty() || pass.isEmpty()) {
+                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, HomeScreen::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
 
     }

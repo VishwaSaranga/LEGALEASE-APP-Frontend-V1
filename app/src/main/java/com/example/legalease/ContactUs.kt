@@ -41,8 +41,10 @@ class ContactUs : AppCompatActivity() {
 
             if (name.isEmpty() || email.isEmpty() || contact.isEmpty() || message.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Your message sent successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Your message sent successfully!", Toast.LENGTH_SHORT).show()
 
                 nameEditText.text.clear()
                 emailEditText.text.clear()
